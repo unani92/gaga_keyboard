@@ -1,0 +1,22 @@
+{
+  "manifest_version": 1,
+
+  "name": "Gaga Keyboard Control",
+  "description": "without mouse controll, use keyboard",
+  "version": "1.0.0",
+
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://www.gagalive.com/live/random_chat"],
+      "js": ["gaga.js"]
+    }
+  ],
+  "permissions": [
+    "tabs",
+    "<all_urls>"
+  ],
+  "web_accessible_resources": ["gaga.js"]
+}
